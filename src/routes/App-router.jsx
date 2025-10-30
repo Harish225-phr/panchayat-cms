@@ -27,7 +27,7 @@ import CopyrightPolicy from '../pages/quick-links/Copyright-Policy';
 import Accessibility from '../pages/quick-links/Accessbility-Option';
 import Disclaimer from '../pages/quick-links/Disclaimer';
 // import EditContent from '../pages/admin/edit-content/EditContent';
-import Tender from '../pages/quick-links/tender';
+import Tender from '../pages/quick-links/Tender';
 import TrainingMaterials from '../pages/quick-links/Training-Materials';
 import SeniorityList from '../pages/quick-links/Seniority-List';
 import PropertyReturns from '../pages/quick-links/Property-Returns';

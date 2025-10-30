@@ -1,12 +1,33 @@
-footer {
-    background-color: #575151d3; /* Light gray background */
-    text-align: center;
-    height: 55px; /* Add some padding for spacing */
-    font-size: 13px; /* Adjust font size as needed */
-    color: #ffffff; /* Gray text color */
+.copyright-section {
+  background: #1a252f;
+  color: #bdc3c7;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-section p {
+  margin: 0;
+  padding: 0;
+  color: #bdc3c7;
+}
+
+.copyright-section a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.copyright-section a:hover {
+  color: #3385d6;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .copyright-section {
+    font-size: 0.8rem;
+    padding: 16px 0;
   }
-  
-  .custom-style {
-    /* margin: 0;  */
-    padding: 15px 0; 
-  }
+}

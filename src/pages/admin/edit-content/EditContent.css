@@ -1,19 +1,86 @@
 .editor-wrapper {
-  background: #f9f9f9;
+  background: white;
   border-radius: 12px;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
   transition: all 0.3s ease;
 }
 
-.ck-editor__editable_inline {
-  min-height: 400px;
-  font-size: 15px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c2c2c;
-  line-height: 1.6;
-  padding: 12px;
-  border-radius: 8px;
+.editor-wrapper:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+.ck-editor__editable {
+  min-height: 500px;
+  border-radius: 8px;
+  border: 2px solid #ecf0f1;
+  transition: border-color 0.3s ease;
+}
+
+.ck-editor__editable:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+.heading-shadow {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.heading-shadow:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.heading-shadow h4 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin: 0;
+}
+
+.heading-shadow i {
+  color: #0066cc;
+  transition: all 0.3s ease;
+}
+
+.heading-shadow i:hover {
+  color: #004d99;
+  transform: translateX(-4px);
+}
+
+.btn-secondary {
+  background: #95a5a6;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(127, 140, 141, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #004d99 0%, #003366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}

@@ -1,16 +1,128 @@
-.custom-dropdown-btn {
-  background-color: transparent;
-  border: none;
-  width: 100%;
-  text-align: left;
-  padding: 8px 16px;
-  font-size: 14px;
-  color: #333;
-  transition: background-color 0.2s ease;
+.notification-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.5s ease;
 }
 
-.custom-dropdown-btn:hover {
-  background-color: #f1f1f1;
-  color: #000;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.notification-header h4 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notification-item {
+  background: #f8f9fa;
+  border-left: 4px solid #0066cc;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.notification-item:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateX(8px);
+}
+
+.notification-item.unread {
+  background: #e3f2fd;
+  border-left-color: #0066cc;
+}
+
+.notification-item.read {
+  opacity: 0.7;
+  border-left-color: #bdc3c7;
+}
+
+.notification-title {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.notification-body {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.notification-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #95a5a6;
+  font-size: 0.8rem;
+}
+
+.notification-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.notification-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.notification-actions .btn-view {
+  background: #0066cc;
+  color: white;
+}
+
+.notification-actions .btn-view:hover {
+  background: #004d99;
+  transform: scale(1.05);
+}
+
+.notification-actions .btn-delete {
+  background: #e74c3c;
+  color: white;
+}
+
+.notification-actions .btn-delete:hover {
+  background: #c0392b;
+  transform: scale(1.05);
 }

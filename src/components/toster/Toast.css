@@ -1,25 +1,152 @@
-.toast-message {
+.toast-container {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 15px 25px;
-  border-radius: 5px;
-  color: white;
+  top: 24px;
+  right: 24px;
   z-index: 9999;
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.toast {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 320px;
+  animation: slideInRight 0.4s ease, fadeOut 0.4s ease 4.6s;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+.toast::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: currentColor;
+}
+
+.toast.success {
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+}
+
+.toast.error {
+  color: #e74c3c;
+  border-left: 4px solid #e74c3c;
+}
+
+.toast.info {
+  color: #3498db;
+  border-left: 4px solid #3498db;
+}
+
+.toast.warning {
+  color: #f39c12;
+  border-left: 4px solid #f39c12;
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.toast-content {
+  flex: 1;
+}
+
+.toast-title {
   font-weight: 700;
-  animation: fadein 0.3s ease-in-out;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #2c3e50;
 }
 
-.toast-message.success {
-  background-color: #28a745;
+.toast-message {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  line-height: 1.4;
 }
 
-.toast-message.error {
-  background-color: #dc3545;
+.toast-close {
+  background: none;
+  border: none;
+  color: #95a5a6;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-@keyframes fadein {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+.toast-close:hover {
+  background: #ecf0f1;
+  color: #7f8c8d;
+}
+
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: currentColor;
+  animation: progress 5s linear;
+  opacity: 0.3;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .toast-container {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+
+  .toast {
+    min-width: auto;
+    width: 100%;
+  }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Banner from '../../components/banner/Banner'
 import Whatsnew from '../../components/whatsnew/Whatsnew'
-import Event from '../../components/Events/Events'
+import Event from '../../components/events/Events'
 import Footer from '../../components/footer/Footer'
 import Copyright from '../../components/copyright/Copyright'
 

@@ -1,48 +1,135 @@
-/*
-ModalOnLoad.css
-Place this CSS in src/components/ModalOnLoad.css
-*/
-
-/* Modal wrapper to mimic Bootstrap modal appearance without JS */
-.custom-modal {
+.modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1050; /* higher than normal page content */
-  padding: 1.5rem;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
 }
 
-.modal-dialog {
-  max-width: 560px;
-  margin: 0 auto;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.modal-content {
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.45);
-  overflow: hidden;
+.modal-content-wrapper {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+  position: relative;
 }
 
-.modal-header, .modal-footer {
-  padding: 1rem 1.25rem;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.modal-body {
-  padding: 1rem 1.25rem;
+.modal-header-custom {
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.custom-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 1040; /* just under the modal */
+.modal-title-custom {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
 }
 
-/* small responsive tweaks */
-@media (max-width: 576px) {
-  .modal-dialog { max-width: 92%; }
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
 }
 
-/* End of file */
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.modal-body-custom {
+  padding: 32px 24px;
+}
+
+.modal-footer-custom {
+  padding: 20px 24px;
+  border-top: 1px solid #ecf0f1;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.modal-content-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content-wrapper::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.modal-content-wrapper::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 4px;
+}
+
+.modal-content-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
+}
+
+@media (max-width: 768px) {
+  .modal-content-wrapper {
+    max-width: 100%;
+    margin: 0 12px;
+  }
+
+  .modal-header-custom {
+    padding: 20px;
+  }
+
+  .modal-title-custom {
+    font-size: 1.25rem;
+  }
+
+  .modal-body-custom {
+    padding: 24px 20px;
+  }
+
+  .modal-footer-custom {
+    padding: 16px 20px;
+  }
+}
