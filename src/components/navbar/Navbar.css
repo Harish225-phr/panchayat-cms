@@ -1,0 +1,23 @@
+.form-select{
+    font-size: 0.65rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    appearance: none;
+    color: white;
+}
+.form-select option {
+    background-color: white;
+    color: black;
+}
+.search-field{
+/* height: 10px; */
+margin: 10px !important;
+margin-right: 120px !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+background-color:transparent;
+}

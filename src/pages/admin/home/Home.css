@@ -1,0 +1,77 @@
+/* Sidebar Base - FIXED */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px;
+  background-color: #164fe0;
+  transition: width 0.3s;
+  overflow-x: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 FIXED HERE */
+  padding-top: 1rem;
+  padding-left: 0.5rem; /* small padding to start */
+}
+
+/* Expand Padding on Hover */
+.sidebar:hover {
+  width: 200px;
+  padding-left: 1rem;
+}
+
+/* Sidebar Button */
+.sidebar .nav-link {
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  transition: background 0.2s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Icon */
+.sidebar .nav-link i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Text hidden by default */
+.sidebar .nav-link span {
+  display: none;
+  margin-left: 12px;
+}
+
+/* Show text on hover */
+.sidebar:hover .nav-link span {
+  display: inline;
+}
+
+/* Hover effect */
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+/* Main Content */
+.main {
+  margin-left: 60px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .main {
+  margin-left: 200px;
+}
+span{
+  font-size: 13px;
+}

@@ -1,0 +1,30 @@
+.footer {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgba(214, 214, 214, 0.164);
+    flex-shrink: 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links Link {
+    margin-bottom: 10px;
+    cursor: pointer;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .custom-icon {
+    margin-right: 8px;
+  }
+  

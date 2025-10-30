@@ -1,0 +1,43 @@
+.page-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.page-list-table th,
+.page-list-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.page-list-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+
+.custom-dropdown-btn {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  font-size: 11px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.custom-dropdown-btn:hover {
+  background-color: #425eff;
+  color: #000;
+  cursor: pointer;
+}
+
+.dropdown-item{
+  padding: 5px 13px;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+
+}

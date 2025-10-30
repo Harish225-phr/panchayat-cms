@@ -1,0 +1,35 @@
+.carousel-inner {
+  border-radius: 12px;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 80% 80%;
+}
+
+.banner-overlay-text {
+  margin-top: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.356);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  min-width: 120px;
+  max-width: 80%;
+  word-break: break-word;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.banner-overlay-text:hover {
+  background: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}

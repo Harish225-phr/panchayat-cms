@@ -1,0 +1,34 @@
+
+.notification-slider {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 30s linear infinite;
+  font-size: 14px;
+  line-height: 45px; /* Match the container height */
+  will-change: transform;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.notification-item {
+  display: inline;
+  margin-right: 50px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

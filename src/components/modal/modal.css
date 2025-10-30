@@ -1,0 +1,48 @@
+/*
+ModalOnLoad.css
+Place this CSS in src/components/ModalOnLoad.css
+*/
+
+/* Modal wrapper to mimic Bootstrap modal appearance without JS */
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1050; /* higher than normal page content */
+  padding: 1.5rem;
+}
+
+.modal-dialog {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+  overflow: hidden;
+}
+
+.modal-header, .modal-footer {
+  padding: 1rem 1.25rem;
+}
+
+.modal-body {
+  padding: 1rem 1.25rem;
+}
+
+.custom-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040; /* just under the modal */
+}
+
+/* small responsive tweaks */
+@media (max-width: 576px) {
+  .modal-dialog { max-width: 92%; }
+}
+
+/* End of file */

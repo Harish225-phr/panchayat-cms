@@ -1,0 +1,91 @@
+.edit-media-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.edit-media-wrapper h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+.banner-preview {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  padding: 10px;
+  text-align: center;
+}
+
+.banner-preview img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="file"] {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #fafafa;
+  transition: border 0.2s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #007bff;
+}
+
+button1.btn-primary {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+.modal-title {
+  font-size: 20px;
+}
+
+.form-label {
+  color: #333;
+}
+
+.form-control,
+.form-select {
+  border-radius: 6px;
+  padding: 10px;
+}
+.custom-dropdown-btn {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.custom-dropdown-btn:hover {
+  background-color: #f1f1f1;
+  color: #000;
+  cursor: pointer;
+}
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.185) !important; /* darker overlay */
+}
+h6{
+  font-size: 12px !important;
+}

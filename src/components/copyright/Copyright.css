@@ -1,0 +1,12 @@
+footer {
+    background-color: #575151d3; /* Light gray background */
+    text-align: center;
+    height: 55px; /* Add some padding for spacing */
+    font-size: 13px; /* Adjust font size as needed */
+    color: #ffffff; /* Gray text color */
+  }
+  
+  .custom-style {
+    /* margin: 0;  */
+    padding: 15px 0; 
+  }
